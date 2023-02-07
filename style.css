@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(360deg, #3d3c3c, #e641e6);
+    font-family: 'Poppins', sans-serif;
+    max-width: 1400px;
+    padding: 15px 10px 0 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    flex-direction: column;
+    line-height: 27px; 
+}
+
+h1 {
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: 200;
+    margin-left: 10px;
+    color: #000;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+a {
+    color: #360436;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+li span {
+    position: relative;
+    z-index: 3;
+}
+
+li span::before {
+    content: "";
+    transform: scaleY(0);
+}
+
+li span:hover::before {
+    width: calc(100% + 1px);
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 20px;
+    left: -1px;
+    background: #360436;
+    transition: width .5s ease-in-out;
+    transform: scaleY(1);
+}
+
+.signIn {
+    border: 2px solid #630863;
+    border-radius: 32px;
+    transition-duration: .5s;
+}
+
+.signIn:hover {
+    background-color: #360436;
+    color: #e641e6;
+    transform: scale(1.1);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+img {
+    width: 529px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 30px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+p {
+    color: #ead1ee;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.text {
+    margin: 20px;
+}
+
+form input {
+    width: 500px;
+    padding: 15px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+
+form input[type="submit"] {
+    border-radius: 20px;
+    width: 200px;
+    color: #ffffff;
+    background-color: #6a1480;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+.inputZone {
+    position: relative;
+}
+
+.inputZone span {
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    color: #360436;
+    opacity: .5;
+    transition: .5s;
+}
+
+.inputZone input:focus ~ span,
+.inputZone input:valid ~ span {
+    transform: translateY(-40px);
+    opacity: 1;
+}
